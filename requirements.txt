@@ -1,0 +1,139 @@
+pylint
+numpy
+pandas
+requests
+matplotlib
+seaborn
+scikit-learn
+scipy
+flask
+django
+fastapi
+uvicorn
+boto3
+paramiko
+fabric
+ansible
+docker
+python-dotenv
+pyyaml
+jsonschema
+xmltodict
+openpyxl
+xlrd
+psutil
+ping3
+netmiko
+beautifulsoup4
+lxml
+scrapy
+pytest
+coverage
+tensorflow
+torch
+keras
+xgboost
+lightgbm
+tqdm
+rich
+loguru
+pydantic
+click
+argparse
+gitpython
+requests-cache
+
+# ================================
+# 🛠 Core Utilities
+# ================================
+requests               # HTTP requests made easy
+httpx                  # Async HTTP client
+python-dotenv          # Load environment variables from .env
+tqdm                   # Progress bars
+rich                   # Pretty printing/logging
+loguru                 # Advanced logging
+click                  # CLI tools
+argparse               # Command-line args parsing
+
+# ================================
+# 🧠 DevOps & Automation
+# ================================
+paramiko               # SSH automation
+fabric                 # Remote shell automation
+ansible                # Ansible execution in Python
+invoke                 # Task execution tool
+pexpect                # Automate interactive shell apps
+
+# ================================
+# 🔌 Networking + Linux
+# ================================
+psutil                 # System & process monitoring
+ping3                  # Ping devices
+netmiko                # Network device automation
+ipaddress              # Built-in for IP manipulation
+socket                 # Built-in socket support
+
+# ================================
+# 🐳 Docker & Kubernetes
+# ================================
+docker                 # Docker SDK for containers
+kubernetes             # Kubernetes Python client
+pykube-ng              # Lightweight K8s API client
+openshift              # OpenShift Python client (optional)
+
+# ================================
+# ☁️ Cloud SDKs
+# ================================
+
+# AWS
+boto3                  # AWS SDK for Python
+
+# Azure
+azure-identity         # Azure auth
+azure-mgmt-resource    # Azure resource manager
+azure-storage-blob     # Blob storage SDK
+
+# Google Cloud
+google-api-python-client   # Google APIs
+google-cloud-storage        # GCS SDK
+google-auth                # Google auth
+
+# ================================
+# 🧪 Testing & Scheduling
+# ================================
+pytest                 # Testing framework
+coverage               # Code coverage
+schedule               # Simple cron-style jobs
+apscheduler            # Advanced job scheduling
+
+# ================================
+# 🔗 APIs: GitHub, Jira, Slack, etc.
+# ================================
+PyGithub               # GitHub API
+jira                   # Jira REST API Python wrapper
+slack-sdk              # Slack bot & messaging API
+prometheus-client      # Export metrics to Prometheus
+requests-cache         # Cache HTTP responses
+
+# ================================
+# 🗃 Data & Formats
+# ================================
+pyyaml                 # YAML parsing (e.g., for K8s configs)
+jsonschema             # JSON validation
+xmltodict              # Work with XML
+openpyxl               # Excel read/write (.xlsx)
+xlrd                   # Excel reader (.xls)
+
+# ================================
+# 🌐 Web Frameworks (Optional)
+# ================================
+flask                  # Minimal API/dashboard
+fastapi                # Fast async API framework
+uvicorn                # ASGI server for FastAPI
+
+# ================================
+# 🧠 ML/Data (Optional)
+# ================================
+pandas                 # Data analysis
+matplotlib             # Plotting (optional)
+scikit-learn           # ML toolkit (optional)
