@@ -23,6 +23,7 @@ print(stdout.decode())
 print(stderr)
 
 print(os.getcwd())
+
 print(os.listdir())
 files = os.listdir()
 filesCount = len(os.listdir())
@@ -40,4 +41,7 @@ exit_code = subprocess.call(['mkdir', 'DataOps'])
 
 result = subprocess.run(['ls'],capture_output=True,text=True)
 print(result)
+
+subprocess.run(['git','status'])
+
 
