@@ -1,0 +1,10 @@
+subscription: "prod-eus2"
+environment: "saas-dev"
+identifier: "prod"
+components:
+  - "decisioning"
+  - "messaging"
+  - "observability"
+deployment-identifier : "cb1"
+
+ami : "12345"

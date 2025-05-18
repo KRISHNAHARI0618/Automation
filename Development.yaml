@@ -1,0 +1,16 @@
+student:
+    Role: DevOps Engineer
+    Skills:
+    - Terraform
+    - Python
+    - Kubernetes
+    marks:
+        Kubernetes: 94
+        Python: 83
+        Terraform: 87
+    name: Peddireddy
+
+student :
+    Role : {{ RoleName }}
+    Year : {{ Year }}
+    Course : {{ Course }}

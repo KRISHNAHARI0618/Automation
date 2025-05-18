@@ -1,0 +1,32 @@
+name: DevOps
+Age: 25
+User: Hari
+marks: 
+  - Science:
+    - number: 1
+    - number: 2
+names:
+  - alice
+  - Bob
+  - CattlePiller
+  - Dogs
+  - Elephants
+idioms: 
+  name1: vardhan
+  name2: hari
+
+levels:
+  - yaml:
+      key1: learn1
+      key2: Learn2
+      key3: Learn3
+  - xml:
+      key1: learn1
+      key2: learn2
+      key3: learn3
+      loops:
+        - int
+        - float
+        - number
+        - bolean
+  

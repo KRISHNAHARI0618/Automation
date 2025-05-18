@@ -1,0 +1,4 @@
+resource "aws_instance" "main" {
+    instance_type = "{{ aws_instance_type }}"
+    ami = "{{ ami_id }}"
+}

@@ -1,0 +1,12 @@
+Hello {{ name | upper }}! {% if age >= 20 %} - Your are a Rocky Person {{ age }} {% else %}- Your need to wait My Buddy {{Name}}-Your Age is {{age}} {% endif %}
+
+{% for item in items %} {%if item == "Bob" %} {{item}}-is-Close-To-HariVardhan 
+{%else%} {{item}}-is-my-name {%endif%} 
+{%endfor%}
+
+available-Fruits: {{ fruits | join(', ') }}
+
+{% for num in numbers %} {% if num % 2 == 0 %} {{num}} is Even Number {% else %} {{num}} is Odd Number {% endif %}
+{% endfor %}
+
+{% for skill in Learning %} I am Learning {{skill | toYaml }} {% endfor %}

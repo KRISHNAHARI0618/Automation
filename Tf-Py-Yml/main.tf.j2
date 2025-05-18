@@ -1,0 +1,21 @@
+resource "aws_instance" "instance1" {
+  ami = "{{ ami_id }}"
+  instance_type = "{{ instance_name }}"
+
+}
+
+{% for component in components %}
+
+resource "aws_instance" "name" {
+
+  instance_type = "componet_{{ loop.index }}"
+  ami = "{{ ami }}"
+
+  tags = {
+    "subscription-id" = "{{ subscription }}"
+    "environment" = "component-{{ loop.index }}"
+  }
+  
+}
+
+{% endfor %}
