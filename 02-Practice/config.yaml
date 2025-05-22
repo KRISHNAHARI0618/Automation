@@ -1,0 +1,21 @@
+Student1:
+  name: hari
+  year: 2025
+  subjects:
+    - Telugu
+    - Hindi
+    - English
+    - Maths
+    - Science
+  age: 25
+  pass: true
+Student2:
+  name: vardhan
+  year: 2026
+  subjects:
+    - java
+    - python
+    - go
+    - terraform
+  age: 28
+  pass: false
