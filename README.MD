@@ -26,3 +26,13 @@ with open('DevOps.txt','r') as file:
 5. b -> binary mode
 6. + -> read and write
 
+### Automation Things:
+
+1. Port Scanner – Identify open TCP ports
+2. Server Health Check – Monitor CPU, memory & disk
+3. Log File Analyzer – Search logs for errors, supports cron & email
+4. SMTP Email Sender – Send alerts via smtplib (no extra libs)
+5. Automated Backup – Backup folders with timestamps
+6. Docker Status Checker – Track container states
+7. Kubernetes Pod Checker – Get pod & container status across namespaces
+
