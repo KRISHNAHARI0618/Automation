@@ -1,29 +1,86 @@
-name: peddireddy
-age: 15
-items:
-- Hari
-- Krishna
-- peddi
-- Alice
-- Bob
-fruits:
-- Apple
-- Banana
-- Custard
-- Drages
-- Earnoes
-- Fairtyles
+# Basic Scalars
+name: Hari
+age: 25
+is_devops_engineer: true
+salary: 100000
+null_value: null
 
-numbers:
-- 20
-- 30
-- 40
-- 5
-- 7
-- 6
+# Strings
+single_quoted: 'Hello World'
+double_quoted: "Hello World"
+plain_string: Just a regular string
 
-Learning: 
-- "alice"
-- "bob"
-- "caterpiller"
-- "datapiller"
+# Multiline strings
+block_literal: |
+  This is a block
+  literal string.
+  Line breaks are preserved.
+
+block_folded: >
+  This is a folded
+  block string.
+  Line breaks are folded
+  into spaces.
+
+# Lists
+skills:
+  - Linux
+  - Python
+  - Terraform
+  - Kubernetes
+  - GitHub Actions
+
+# Inline list
+cloud_providers: [AWS, Azure, GCP]
+
+# Dictionaries (Mappings)
+tools:
+  terraform: 1.5.2
+  kubectl: 1.29
+  ansible: 2.15.3
+
+# Nested Dictionary
+project:
+  name: DevOps Automation
+  team:
+    lead: Malli
+    members:
+      - Krishna
+      - Arjun
+
+# Mixed list of dictionaries
+servers:
+  - name: web1
+    ip: 192.168.0.1
+    role: frontend
+  - name: db1
+    ip: 192.168.0.2
+    role: backend
+
+# Anchors and Aliases
+defaults: &default_settings
+  retries: 3
+  timeout: 30
+  debug: false
+
+prod_settings:
+  <<: *default_settings
+  debug: true
+  timeout: 60
+
+# Boolean variations
+bools:
+  yes_val: yes
+  no_val: no
+  true_val: true
+  false_val: false
+  on_val: on
+  off_val: off
+
+# Timestamp and Date
+deployment_time: 2025-05-18T09:30:00Z
+created_on: 2025-05-18
+
+# Comments are ignored
+# This YAML file covers all major YAML concepts.
+

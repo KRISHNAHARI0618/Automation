@@ -1,12 +1,111 @@
-Hello {{ name | upper }}! {% if age >= 20 %} - Your are a Rocky Person {{ age }} {% else %}- Your need to wait My Buddy {{Name}}-Your Age is {{age}} {% endif %}
+# ------------------ Scalars ------------------
+variable "name" {
+  default = "{{ name }}"
+}
 
-{% for item in items %} {%if item == "Bob" %} {{item}}-is-Close-To-HariVardhan 
-{%else%} {{item}}-is-my-name {%endif%} 
-{%endfor%}
+variable "age" {
+  default = {{ age }}
+}
 
-available-Fruits: {{ fruits | join(', ') }}
+variable "salary" {
+  default = {{ salary }}
+}
 
-{% for num in numbers %} {% if num % 2 == 0 %} {{num}} is Even Number {% else %} {{num}} is Odd Number {% endif %}
-{% endfor %}
+variable "is_devops_engineer" {
+  default = {{ is_devops_engineer | lower }}
+}
 
-{% for skill in Learning %} I am Learning {{skill | toYaml }} {% endfor %}
+variable "null_value" {
+  default = null
+}
+
+# ------------------ Strings ------------------
+output "quoted_strings" {
+  value = {
+    single_quoted = "{{ single_quoted }}"
+    double_quoted = "{{ double_quoted }}"
+    plain_string  = "{{ plain_string }}"
+  }
+}
+
+# ------------------ Multi-line ------------------
+output "block_literal" {
+  value = <<EOT
+{{ block_literal }}
+EOT
+}
+
+output "block_folded" {
+  value = "{{ block_folded }}"
+}
+
+# ------------------ Lists ------------------
+variable "skills" {
+  type = list(string)
+  default = {{ skills }}
+}
+
+variable "cloud_providers" {
+  type = list(string)
+  default = {{ cloud_providers }}
+}
+
+# ------------------ Maps ------------------
+variable "tools" {
+  type = map(string)
+  default = {
+    {% for tool, version in tools.items() %}
+    {{ tool }} = "{{ version }}"
+    {% endfor %}
+  }
+}
+
+# ------------------ Nested ------------------
+resource "project" "example" {
+  name = "{{ project.name }}"
+
+  team_lead = "{{ project.team.lead }}"
+  members = [
+    {% for member in project.team.members %}
+    "{{ member }}",
+    {% endfor %}
+  ]
+}
+
+# ------------------ List of Maps ------------------
+resource "servers" "example" {
+  count = {{ servers | length }}
+  name  = "{{ servers[0].name }}"
+  ip    = "{{ servers[0].ip }}"
+  role  = "{{ servers[0].role }}"
+}
+
+# ------------------ Anchors & Overrides ------------------
+output "prod_settings" {
+  value = {
+    retries = {{ prod_settings.retries }}
+    timeout = {{ prod_settings.timeout }}
+    debug   = {{ prod_settings.debug }}
+  }
+}
+
+# ------------------ Boolean Variants ------------------
+output "bools" {
+  value = {
+    yes_val   = {{ bools.yes_val | lower }}
+    no_val    = {{ bools.no_val | lower }}
+    true_val  = {{ bools.true_val | lower }}
+    false_val = {{ bools.false_val | lower }}
+    on_val    = {{ bools.on_val | lower }}
+    off_val   = {{ bools.off_val | lower }}
+  }
+}
+
+# ------------------ Timestamps ------------------
+output "deployment_time" {
+  value = "{{ deployment_time }}"
+}
+
+output "created_on" {
+  value = "{{ created_on }}"
+}
